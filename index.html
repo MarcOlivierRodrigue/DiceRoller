@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta title="My Dice Roller">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <title>Mon roulle dé</title>
+</head>
+<body>
+   <div class="wrapper">
+        <div class="roller">
+                <div class="inputContainer">
+                    <label for="numDiceRolled">Combien de dés?</label>
+                    <input class="numDiceRolled" name="numDiceRolled" min="1" type="number" placeholder="1">
+                </div>
+                <div class="math">x</div>
+                <div class="inputContainer">
+                    <label for="faces">Nombre de faces</label>
+                    <input name="faces" class="faces" type="number" placeholder="20">
+                </div>
+                <div class="math">+</div>
+                <div class="inputContainer">
+                    <label for="modifier">Le modificateur</label>
+                    <input name="modifier" class="modifier" type="number" placeholder="0">
+                </div>
+                <button class="startRoll"><i class="fas fa-dice"></i></button>
+            </div>
+            <div class="prev-rolls">
+            </div>
+            <script src="script.js"></script>
+   </div> 
+</body>
+</html>

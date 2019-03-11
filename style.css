@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.roller {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
