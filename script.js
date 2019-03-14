@@ -8,7 +8,7 @@ const dataHandler = () => {
     }; 
 
     return {
-        roll: function (nbreDices, dices, modifier) {
+        roll(nbreDices, dices, modifier) {
 
             rolls = [];
 
@@ -25,7 +25,7 @@ const dataHandler = () => {
 
         },
 
-        getRoll: function () {
+        getRoll() {
             return storeRoll(rolls);
         }
     }
@@ -42,26 +42,26 @@ const uiHandler = () => {
     }
 
     return {
-        getDOM: function() {
+        getDOM() {
             return DOM;
         },
 
-        getnbrOfDices: function () {
+        getnbrOfDices() {
             let value  = parseInt(document.querySelector(DOM.nbrDices).value);
             return value ? value : 1;
         },
 
-        getTypeOfDice: function () {
+        getTypeOfDice() {
             let value  = parseInt(document.querySelector(DOM.dice).value);
             return value ? value : 20;
         },
 
-        getMod: function () {
+        getMod() {
             let value  = parseInt(document.querySelector(DOM.mod).value);
             return value ? value : 0;
         },
 
-        clearField: function() {
+        clearField() {
             fields = document.querySelectorAll(DOM.inputs);
             fieldsArr = Array.prototype.slice.call(fields);
             fieldsArr.forEach(current => {
@@ -71,7 +71,7 @@ const uiHandler = () => {
             fieldsArr[0].focus();
         },
 
-        displayRoll: function(roll) {
+        displayRoll(roll) {
             const calcResult = (accumulator, currentValue) => accumulator + currentValue;
             let rolls = roll;
             let result = rolls.reduce(calcResult);
