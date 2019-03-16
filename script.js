@@ -37,7 +37,7 @@ const uiHandler = () => {
         dice: ".faces",
         mod: ".modifier",
         roll: ".startRoll",
-        prevRoll: ".prev-rolls",
+        prevRoll: ".prev-rolls ul",
         inputs: ".field"
     }
 
@@ -76,8 +76,12 @@ const uiHandler = () => {
             let rolls = roll;
             let result = rolls.reduce(calcResult);
 
-            console.log(rolls);
-            console.log(result);
+            const addition = rolls.join(" + ");
+            const rollElement = document.createElement("li");
+            rollElement.innerHTML = `${addition} = <strong>${result}</strong>`;
+            const prevRoll = document.querySelector(DOM.prevRoll);
+
+            prevRoll.appendChild(rollElement);
         }
     }
 
